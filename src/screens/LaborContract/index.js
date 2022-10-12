@@ -21,7 +21,7 @@ const LaborContract = () => {
     return (
         <ScrollView style={styles.container}>
             {data.map((item, index) => (
-                <View style={styles.itemBox}>
+                <View style={styles.itemBox} key={index}>
                     <View style={styles.proBox}>
                         <Properties
                             label='Số hợp đồng'
