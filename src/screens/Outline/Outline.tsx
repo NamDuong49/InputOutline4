@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, Button} from 'react-native';
+import {View, Text, StyleSheet, Button, Image, TouchableOpacity} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import OutlineInput from '../../components/OutlineInput';
 
@@ -8,6 +8,7 @@ const Outline = () => {
   const [errorPass, setErrorPass] = useState(undefined);
   const [user, setUser] = useState('');
   const [pass, setPass] = useState('');
+  const [secure, setSecure] = useState(true);
   const length = data.length;
   const showError = () => {
     if (pass.length < 6) {
@@ -27,6 +28,17 @@ const Outline = () => {
       }
     }
   }, [user]);
+
+  const Icon = () => {
+    return(
+      <TouchableOpacity onPress={() => {setSecure(!secure);}}>
+        <Image 
+          style={styles.image}
+          source={require('../../../assets/images/person.png')}
+        />
+      </TouchableOpacity>
+    )
+  }
   return (
     <View style={styles.container}>
       <View style={styles.inputBox}>
@@ -36,6 +48,8 @@ const Outline = () => {
           characterCount={50}
           value={user}
           onChangeText={setUser}
+          
+        
         />
       </View>
       <View style={styles.inputBox}>
@@ -47,10 +61,11 @@ const Outline = () => {
           value={pass}
           onChangeText={setPass}
           keyboardType={'numeric'}
-          secureTextEntry={true}
+          secureTextEntry={secure}
+          trailingIcon={Icon}
         />
       </View>
-      <Button onPress={showError} title="Button" style={styles.button} />
+      <Button onPress={showError} title="Button" />
     </View>
   );
 };
@@ -64,6 +79,10 @@ const styles = StyleSheet.create({
   inputBox: {
     margin: 20,
   },
+  image: {
+    height: 30,
+    width: 30,
+  }
 });
 
 export default Outline;

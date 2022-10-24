@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+// import {View, Text} from 'react-native';
 import React from 'react';
 import {InputOutline, InputStandard} from 'react-native-input-outline';
 
@@ -11,6 +11,17 @@ const OutlineInput = ({
   secureTextEntry,
   value,
   onChangeText,
+  trailingIcon
+}: {
+  placeholder: string;
+  error: any;
+  assistiveText: string;
+  characterCount: number;
+  keyboardType: string;
+  secureTextEntry: boolean;
+  value: any;
+  onChangeText: any;
+  trailingIcon: any;
 }) => {
   return (
     <InputOutline
@@ -28,6 +39,7 @@ const OutlineInput = ({
       secureTextEntry={secureTextEntry}
       value={value}
       onChangeText={onChangeText}
+      trailingIcon={trailingIcon}
     />
   );
 };

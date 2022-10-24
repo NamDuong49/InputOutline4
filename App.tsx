@@ -21,6 +21,7 @@ const App = () => {
     // <PreviousWork/>
     // <CurrentWork/>
     // <LaborContract/>
+    // <Outline/>
   );
 };
 
