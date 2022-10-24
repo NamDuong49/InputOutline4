@@ -1,4 +1,11 @@
-import {View, Text, StyleSheet, Button, Image, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Button,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import OutlineInput from '../../components/OutlineInput';
 
@@ -30,15 +37,18 @@ const Outline = () => {
   }, [user]);
 
   const Icon = () => {
-    return(
-      <TouchableOpacity onPress={() => {setSecure(!secure);}}>
-        <Image 
+    return (
+      <TouchableOpacity
+        onPress={() => {
+          setSecure(!secure);
+        }}>
+        <Image
           style={styles.image}
           source={require('../../../assets/images/person.png')}
         />
       </TouchableOpacity>
-    )
-  }
+    );
+  };
   return (
     <View style={styles.container}>
       <View style={styles.inputBox}>
@@ -80,7 +90,7 @@ const styles = StyleSheet.create({
   image: {
     height: 30,
     width: 30,
-  }
+  },
 });
 
 export default Outline;

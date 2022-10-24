@@ -2,7 +2,7 @@ import {View, Text, KeyboardTypeOptions} from 'react-native';
 import React from 'react';
 import {InputOutline, InputStandard} from 'react-native-input-outline';
 
-interface Props{
+interface Props {
   placeholder: string;
   error?: string | undefined;
   assistiveText?: string;
@@ -11,10 +11,10 @@ interface Props{
   secureTextEntry?: boolean;
   value: string;
   onChangeText: Function;
-  trailingIcon?: any
+  trailingIcon?: any;
 }
 
-export default function OutlineInput(props: Props){
+export default function OutlineInput(props: Props) {
   return (
     <InputOutline
       placeholder={props.placeholder}
@@ -30,7 +30,7 @@ export default function OutlineInput(props: Props){
       keyboardType={props.keyboardType}
       secureTextEntry={props.secureTextEntry}
       value={props.value}
-      onChangeText={(text) => props.onChangeText(text)}
+      onChangeText={text => props.onChangeText(text)}
       trailingIcon={props.trailingIcon}
     />
   );

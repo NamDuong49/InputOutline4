@@ -2,13 +2,13 @@ import {View, Text, Image, ImageSourcePropType} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import styles from './styles';
 
-interface Props{
+interface Props {
   label: string;
   content: string;
   link: ImageSourcePropType | undefined;
 }
 
-export default function Properties(props: Props){
+export default function Properties(props: Props) {
   const [text, setText] = useState('');
   useEffect(() => {
     if (props.content == '') {
