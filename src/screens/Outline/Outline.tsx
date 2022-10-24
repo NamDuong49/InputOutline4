@@ -48,8 +48,6 @@ const Outline = () => {
           characterCount={50}
           value={user}
           onChangeText={setUser}
-          
-        
         />
       </View>
       <View style={styles.inputBox}>
