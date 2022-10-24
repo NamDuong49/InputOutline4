@@ -1,11 +1,11 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, ImageSourcePropType} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import styles from './styles';
 
 interface Props{
   label: string;
   content: string;
-  link: string;
+  link: ImageSourcePropType | undefined;
 }
 
 export default function Properties(props: Props){
