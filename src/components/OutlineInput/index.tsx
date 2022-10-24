@@ -32,6 +32,8 @@ export default function OutlineInput(props: Props) {
       value={props.value}
       onChangeText={text => props.onChangeText(text)}
       trailingIcon={props.trailingIcon}
+      backgroundColor={'red'}
+      style={{borderRadius: 8, borderWidth: 1, backgroundColor: 'transparent'}}
     />
   );
 }

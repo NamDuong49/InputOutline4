@@ -81,7 +81,7 @@ const Outline = () => {
 const styles = StyleSheet.create({
   container: {
     paddingTop: 20,
-    backgroundColor: 'white',
+    backgroundColor: '#b0f5c6',
     flex: 1,
   },
   inputBox: {
