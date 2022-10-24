@@ -22,7 +22,7 @@ const LaborContract = () => {
   }, []);
   return (
     <ScrollView style={styles.container}>
-      {data.map((item, index) => (
+      {data.map((item: any, index: number) => (
         <View style={styles.itemBox} key={index}>
           <View style={styles.proBox}>
             <Properties
