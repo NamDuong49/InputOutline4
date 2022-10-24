@@ -7,7 +7,6 @@
  * ./gradlew clean
  */
 
-import {View, Text, StyleSheet, Button} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import Outline from './src/screens/Outline/Outline';
 import Relationship from './src/screens/Relationship';

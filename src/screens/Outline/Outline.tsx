@@ -4,8 +4,8 @@ import OutlineInput from '../../components/OutlineInput';
 
 const data = ['Nam', 'Duong'];
 const Outline = () => {
-  const [errorUser, setErrorUser] = useState(undefined);
-  const [errorPass, setErrorPass] = useState(undefined);
+  const [errorUser, setErrorUser] = useState<string | undefined>(undefined);
+  const [errorPass, setErrorPass] = useState<string | undefined>(undefined);
   const [user, setUser] = useState('');
   const [pass, setPass] = useState('');
   const [secure, setSecure] = useState(true);
