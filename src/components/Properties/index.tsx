@@ -4,12 +4,12 @@ import styles from './styles';
 
 interface Props {
   label: string;
-  content: string;
-  link: ImageSourcePropType | undefined;
+  content: string | null;
+  link?: ImageSourcePropType | undefined;
 }
 
 export default function Properties(props: Props) {
-  const [text, setText] = useState('');
+  const [text, setText] = useState<string | null>('');
   useEffect(() => {
     if (props.content == '') {
       setText('-');
@@ -21,7 +21,7 @@ export default function Properties(props: Props) {
     <View style={styles.container}>
       <View style={styles.rowLabel}>
         <View style={styles.imageBox}>
-          <Image style={styles.image} source={props.link} />
+          {props.link &&<Image style={styles.image} source={props.link} />}
         </View>
         <Text style={styles.label}>{props.label}</Text>
       </View>

@@ -16,11 +16,11 @@ import LaborContract from './src/screens/LaborContract';
 
 const App = () => {
   return (
-    // <Relationship />
+    <Relationship />
     // <PreviousWork/>
     // <CurrentWork/>
     // <LaborContract/>
-    <Outline/>
+    // <Outline/>
   );
 };
 
